@@ -13,12 +13,12 @@ It is designed to be completely generic – you can use it for any two categorie
 The code includes full **Exploratory Data Analysis (EDA)**, **data preprocessing**, **model training**, and **automatic model saving/loading**.
 
 ---
-
 ## 📁 Dataset Structure
 
-Place your dataset in the `dataset/` folder with two subfolders – one for each class.
+Place your dataset in the `dataset/` folder with two subfolders – one for each class.  
 **You can name them anything**, but for this example we use `class_1` and `class_2`:
 
+```
 project-root/
 │
 ├── dataset/
@@ -36,8 +36,9 @@ project-root/
 │
 ├── main.py                    # Main script (your complete code)
 └── README.md
+```
 
-> **Important**: The core training pipeline (`create_data_generators()`) automatically detects **any** subfolder names inside `dataset/`.
+> **Important**: The core training pipeline (`create_data_generators()`) automatically detects **any** subfolder names inside `dataset/`.  
 > However, the helper EDA functions in the `__main__` block currently reference `cat` and `dog` as examples. If you use different folder names:
 > - **Option 1 (simplest)**: Rename your folders to `cat` and `dog` to run everything without changes.
 > - **Option 2**: Update the paths inside `main.py`:
