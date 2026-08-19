@@ -164,3 +164,67 @@ After training, typical performance metrics are:
 - **Validation accuracy**: `~85%`
 
 You can plot accuracy and loss curves using the `history` object returned by `compile_and_fit()` for deeper insight.
+
+---
+## 🛠️ Utility Functions (EDA)
+
+The script includes several helper functions for dataset exploration and validation:
+
+| Function                               | Purpose                                                      |
+|----------------------------------------|--------------------------------------------------------------|
+| `CalcutePixels(PATH)`                 | Computes average, min, and max image dimensions             |
+| `showSomeExmples(path1, path2)`       | Displays 4 sample images from each class                    |
+| `count_and_split_report(dataset_path)`| Reports the number of images in train/test splits           |
+| `analyze_dataset(dataset_path)`       | Provides overall stats (image count, extensions, etc.)      |
+| `tensorflow_image_check(dataset_path)`| Identifies corrupted or unreadable images                   |
+| `analyze_image_dimensions(dataset_path)` | Lists unique image dimensions and their frequencies       |
+
+---
+
+## 📂 Project Structure
+
+```
+.
+├── dataset/                     # Your image dataset (user‑created)
+│   ├── class_1/                 # First class images
+│   └── class_2/                 # Second class images
+├── saved_models/                # Saved model after training
+│   └── animal_cnn.keras
+├── main.py                      # Main script with all functions
+├── requirements.txt             # (Optional) List of dependencies
+└── README.md                    # This file
+```
+
+---
+
+## 🔧 Customization
+
+You can easily modify the core parameters inside the code:
+
+```python
+# In create_data_generators()
+IMAGE_SIZE = (224, 224)    # Change input image size
+BATCH_SIZE = 32            # Change batch size
+VALIDATION_SPLIT = 0.25    # Change validation ratio
+
+# In modeling()
+# Adjust layers, number of filters, kernel sizes, or dropout rate
+
+# In compile_and_fit()
+epochs = 30                # Change maximum number of epochs
+patience = 5               # Change Early Stopping patience
+```
+
+---
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are always welcome!  
+Feel free to open an **Issue** or submit a **Pull Request**.
+
+---
+
+## 📜 License
+
+This project is licensed under the **MIT License** – you are free to use, modify, and distribute it as you wish.
+
