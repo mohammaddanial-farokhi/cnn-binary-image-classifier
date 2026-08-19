@@ -56,36 +56,79 @@ Install the required libraries with:
 
 ```bash
 pip install tensorflow numpy matplotlib Pillow scikit-learn
-Or use a requirements.txt file:
+```
+
+Or use a `requirements.txt` file:
 
 ```bash
 pip install -r requirements.txt
+```
 
-Usage
-1. Activating Different Parts of the Code
-At the bottom of main.py, inside if __name__ == "__main__", all function calls are commented out.
-Uncomment the sections you wish to execute
+**Dependencies**:
+- `tensorflow >= 2.8.0`
+- `numpy`
+- `matplotlib`
+- `Pillow`
+- `scikit-learn`
 
-2. Training the Model
+---
+
+## 🚀 Usage
+
+### 1. Activating Different Parts of the Code
+
+At the bottom of `main.py`, inside `if __name__ == "__main__"`, all function calls are **commented out**.  
+Uncomment the sections you wish to execute:
+
+```python
+if __name__ == "__main__":
+
+    dataset_path = "dataset"
+    # Update these paths to match your actual class folders
+    class1_path = "dataset/class_1"
+    class2_path = "dataset/class_2"
+
+    # 1. EDA (Exploratory Data Analysis)
+    # CalcutePixels(dataset_path)          # Calculate average image dimensions
+    # showSomeExmples(class1_path, class2_path)  # Show sample images
+    # count_and_split_report(dataset_path) # Train/Test split report
+    # analyze_dataset(dataset_path)        # Full dataset analysis
+    # bad_images = tensorflow_image_check(dataset_path) # Find corrupted images
+    # analyze_image_dimensions(dataset_path) # Analyse image dimensions
+
+    # 2. PreProcess (Create Data Generators)
+    # train_dataset, validation_dataset, dataset_info = create_data_generators()
+    # print_generator_summary(dataset_info)
+    # analyze_dataset_labels(train_dataset, validation_dataset, dataset_info)
+
+    # 3. Modeling (Build the CNN)
+    # model = modeling()
+
+    # 4. Compile & Fit (Train or load the model)
+    # model, history = compile_and_fit(model, train_dataset, validation_dataset)
+```
+
+### 2. Training the Model
+
 To train the model from scratch, uncomment these lines:
 
-```bash
+```python
 train_dataset, validation_dataset, dataset_info = create_data_generators()
 model = modeling()
 model, history = compile_and_fit(model, train_dataset, validation_dataset)
+```
+
 Then execute:
 
 ```bash
 python main.py
-Training Configuration:
+```
 
-Image size: 224x224 pixels
+**Training Configuration**:
+- **Image size**: `224x224` pixels
+- **Max epochs**: `30` with **Early Stopping** (stops if validation loss does not improve for 5 consecutive epochs)
+- **Batch size**: `32`
+- **Validation split**: `25%` (stratified to preserve class balance)
 
-Max epochs: 30 with Early Stopping (stops if validation loss does not improve for 5 consecutive epochs)
-
-Batch size: 32
-
-Validation split: 25% (stratified to preserve class balance)
-
-Once training finishes, the model is saved to ./saved_models/animal_cnn.keras.
-If this file already exists, the model is loaded directly and training is skipped – allowing you to reuse a previously trained model without retraining.
+Once training finishes, the model is saved to `./saved_models/animal_cnn.keras`.  
+If this file already exists, the model is **loaded** directly and training is skipped – allowing you to reuse a previously trained model without retraining.
