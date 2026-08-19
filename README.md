@@ -16,28 +16,28 @@ The code includes full **Exploratory Data Analysis (EDA)**, **data preprocessing
 
 ## 📁 Dataset Structure
 
-Place your dataset in the `dataset/` folder with two subfolders – one for each class.  
+Place your dataset in the `dataset/` folder with two subfolders – one for each class.
 **You can name them anything**, but for this example we use `class_1` and `class_2`:
+
 project-root/
 │
 ├── dataset/
-│ ├── class_1/ # All images for the first class
-│ │ ├── img_001.jpg
-│ │ ├── img_002.jpg
-│ │ └── ...
-│ └── class_2/ # All images for the second class
-│ ├── img_001.jpg
-│ ├── img_002.jpg
-│ └── ...
+│   ├── class_1/               # All images for the first class
+│   │   ├── img_001.jpg
+│   │   ├── img_002.jpg
+│   │   └── ...
+│   └── class_2/               # All images for the second class
+│       ├── img_001.jpg
+│       ├── img_002.jpg
+│       └── ...
 │
 ├── saved_models/
-│ └── animal_cnn.keras # Saved model (created after training)
+│   └── animal_cnn.keras       # Saved model (created after training)
 │
-├── main.py # Main script (your complete code)
+├── main.py                    # Main script (your complete code)
 └── README.md
 
-
-> **Important**: The core training pipeline (`create_data_generators()`) automatically detects **any** subfolder names inside `dataset/`.  
+> **Important**: The core training pipeline (`create_data_generators()`) automatically detects **any** subfolder names inside `dataset/`.
 > However, the helper EDA functions in the `__main__` block currently reference `cat` and `dog` as examples. If you use different folder names:
 > - **Option 1 (simplest)**: Rename your folders to `cat` and `dog` to run everything without changes.
 > - **Option 2**: Update the paths inside `main.py`:
