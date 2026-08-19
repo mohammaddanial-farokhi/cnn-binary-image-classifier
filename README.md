@@ -31,11 +31,8 @@ project-root/
 │       ├── img_002.jpg
 │       └── ...
 │
-├── saved_models/
-│   └── animal_cnn.keras       # Saved model (created after training)
 │
 ├── main.py                    # Main script (your complete code)
-└── README.md
 ```
 
 > **Important**: The core training pipeline (`create_data_generators()`) automatically detects **any** subfolder names inside `dataset/`.  
