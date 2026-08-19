@@ -62,11 +62,11 @@ pip install -r requirements.txt
 ```
 
 **Dependencies**:
-- `tensorflow >= 2.8.0`
-- `numpy`
-- `matplotlib`
-- `Pillow`
-- `scikit-learn`
+- `tensorflow >=2.10.1`
+- `numpy >=2.5.2`
+- `matplotlib >=3.11.1`
+- `Pillow >=12.3.0`
+- `scikit-learn >=1.9.0`
 
 ---
 
