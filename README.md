@@ -1,4 +1,4 @@
-# nn-binary-image-classifier
+# cnn-binary-image-classifier
 
 **Binary Image Classifier using CNN**
 
