@@ -1,5 +1,21 @@
 # cnn-binary-image-classifier
+<br>
 
+![Python](https://img.shields.io/badge/Python-3.10.20-blue.svg)
+![TensorFlow](https://img.shields.io/badge/TensorFlow-Deep%20Learning-orange.svg)
+![Keras](https://img.shields.io/badge/Keras-API-red.svg)
+![CNN](https://img.shields.io/badge/Model-CNN-blueviolet.svg)
+![NumPy](https://img.shields.io/badge/NumPy-Computations-navy.svg)
+![Matplotlib](https://img.shields.io/badge/Matplotlib-Visualization-lightblue.svg)
+![Pillow](https://img.shields.io/badge/Pillow-Image%20Processing-brightgreen.svg)
+![Scikit-Learn](https://img.shields.io/badge/Scikit--Learn-Data%20Split-yellow.svg)
+![Dataset](https://img.shields.io/badge/Dataset-Custom%20(2%20Classes)-purple.svg)
+![Task](https://img.shields.io/badge/Task-Binary%20Classification-success.svg)
+![License](https://img.shields.io/badge/License-MIT-lightgrey.svg)
+
+</div>
+
+---
 **Binary Image Classifier using CNN**
 
 This project implements a **Convolutional Neural Network (CNN)** using TensorFlow/Keras to perform binary classification on **two distinct image classes**.  
