@@ -156,11 +156,11 @@ The CNN architecture is defined as follows:
 
 ---
 
-## 📊 Results (Example)
+## 📊 Results 
 
 After training, typical performance metrics are:
 
-- **Training accuracy**: `~98%` (varies with dataset size and complexity)
-- **Validation accuracy**: `~95%`
+- **Training accuracy**: `~83%` (varies with dataset size and complexity)
+- **Validation accuracy**: `~85%`
 
 You can plot accuracy and loss curves using the `history` object returned by `compile_and_fit()` for deeper insight.
