@@ -132,3 +132,35 @@ python main.py
 
 Once training finishes, the model is saved to `./saved_models/animal_cnn.keras`.  
 If this file already exists, the model is **loaded** directly and training is skipped – allowing you to reuse a previously trained model without retraining.
+
+---
+## 🧠 Model Architecture
+
+The CNN architecture is defined as follows:
+
+| Layer                 | Description                              |
+|-----------------------|------------------------------------------|
+| `Conv2D(32, 3x3)`     | Low‑level feature extraction             |
+| `MaxPool2D(2,2)`      | Dimensionality reduction                 |
+| `Conv2D(64, 3x3)`     | Mid‑level feature extraction             |
+| `MaxPool2D(2,2)`      | Dimensionality reduction                 |
+| `Conv2D(128, 3x3)`    | High‑level feature extraction            |
+| `MaxPool2D(2,2)`      | Dimensionality reduction                 |
+| `GlobalAveragePooling2D` | Convert feature maps to a vector      |
+| `Dense(32, ReLU)`     | Fully connected layer                    |
+| `Dropout(0.5)`        | Regularization (prevents overfitting)    |
+| `Dense(1, Sigmoid)`   | Output layer (probability for class 2)   |
+
+> **Loss function**: `binary_crossentropy`  
+> **Optimizer**: `Adam`
+
+---
+
+## 📊 Results (Example)
+
+After training, typical performance metrics are:
+
+- **Training accuracy**: `~98%` (varies with dataset size and complexity)
+- **Validation accuracy**: `~95%`
+
+You can plot accuracy and loss curves using the `history` object returned by `compile_and_fit()` for deeper insight.
